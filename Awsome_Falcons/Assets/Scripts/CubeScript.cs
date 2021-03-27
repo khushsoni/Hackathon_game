@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CubeScript : MonoBehaviour
 {
-    public Rigidbody rigidbody;
+    public new Rigidbody rigidbody;
     public float force = 1000f;
     public float speed = 10f;
     public float maxX;

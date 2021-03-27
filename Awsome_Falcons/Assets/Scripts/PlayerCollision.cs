@@ -6,11 +6,10 @@ public class PlayerCollision : MonoBehaviour
 {
 
 	public CubeScript cubeScript;
-	
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject.name == "PupCube")
+		if (other.gameObject.tag == "SphereCollects")
 		{
 			Destroy(other.gameObject);
 		}
@@ -18,7 +17,7 @@ public class PlayerCollision : MonoBehaviour
 
 	private void OnCollisionEnter(Collision other)
 	{
-		if (other.gameObject.name == "obs")
+		if(other.gameObject.tag == "Obstacles")
 		{
 			cubeScript.enabled = false;
 		}
