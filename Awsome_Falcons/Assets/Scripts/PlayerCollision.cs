@@ -6,6 +6,7 @@ public class PlayerCollision : MonoBehaviour
 {
 
 	public CubeScript cubeScript;
+	public GameManager gameManager;
 
 	private void OnTriggerEnter(Collider other)
 	{
@@ -20,6 +21,7 @@ public class PlayerCollision : MonoBehaviour
 		if(other.gameObject.tag == "Obstacles")
 		{
 			cubeScript.enabled = false;
+			FindObjectOfType<GameManager>().Endgame();
 		}
 	}
 
